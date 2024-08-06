@@ -5,7 +5,7 @@ Uso do Terraform na Magalu Cloud
 
 1. Crie uma key no https://id.magalu.com/api-keys para ser utilizada no código
 
-2. Crie o arquivo terraform.tfvars e adicione as variáveis, ex:
+2. Crie o arquivo `terraform.tfvars` e adicione as variáveis, ex:
 ```
 mgc_api_key = "xxx"
 mgc_obj_key_id = "xxx"
