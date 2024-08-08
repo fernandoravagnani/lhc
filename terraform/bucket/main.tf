@@ -1,10 +1,3 @@
-variable "mgc_api_key" {}
-variable "mgc_obj_key_id" {}
-variable "mgc_obj_key_secret" {}
-variable "mgc_region" {}
-variable "mgc_env" {}
-variable "lhc_bucket" {}
-
 resource "mgc_object_storage_buckets" "lhc-bucket" {
   provider          = mgc.sudeste
   bucket            = var.lhc_bucket

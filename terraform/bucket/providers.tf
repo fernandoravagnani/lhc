@@ -1,6 +1,25 @@
+variable "mgc_api_key" {}
+variable "mgc_obj_key_id" {}
+variable "mgc_obj_key_secret" {}
+variable "mgc_region_sudeste" {}
+variable "mgc_region_nordeste" {}
+variable "lhc_bucket" {}
+
 provider "mgc" {
   alias = "sudeste"
-  region = var.mgc_region
+  region = var.mgc_region_sudeste
+  api_key = var.mgc_api_key
+  object_storage = {
+    key_pair = {
+      key_id = var.mgc_obj_key_id
+      key_secret = var.mgc_obj_key_secret
+    }
+  }
+}
+
+provider "mgc" {
+  alias = "nordeste"
+  region = var.mgc_region_nordeste
   api_key = var.mgc_api_key
   object_storage = {
     key_pair = {
@@ -16,15 +35,4 @@ terraform {
       source = "magalucloud/mgc"
     }
   }
-  #backend "s3" {
-  #  bucket                      = "terraform-state-lhc"
-  #  key                         = "terraform.tfstate"
-  #  #secret_key                  = local.mgc_key_secret
-  #  #access_key                  = local.mgc_key_id
-  #  region                      = "br-se1"
-  #  skip_region_validation      = true
-  #  skip_credentials_validation = true
-  #  skip_metadata_api_check     = true
-  #  endpoint                    = "https://br-se1.magaluobjects.com"
-  #}
 }
