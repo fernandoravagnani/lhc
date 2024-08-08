@@ -1,0 +1,8 @@
+mgc_api_key = "a250d8ec-f5ed-4aac-aaba-6d7445dfa8e7"
+mgc_api_key_id = "38526ee3-990b-4dc5-a644-69d9dcdbb648"
+mgc_api_key_secret = "91d7ed7a-5d5c-4f7e-b942-c9da116f1ad3"
+mgc_region = "br-se1"
+mgc_env = "test"
+vm_size = "vm_size"
+db_username = "admin"
+db_password = "12345678"
