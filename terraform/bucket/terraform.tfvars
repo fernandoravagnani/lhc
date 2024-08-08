@@ -1,0 +1,6 @@
+mgc_api_key = "MGC_API_KEY"
+mgc_obj_key_id = "MGC_OBJ_KEY_ID"
+mgc_obj_key_secret = "MGC_OBJ_KEY_SECRET"
+mgc_region_sudeste = "MGC_REGION_SUDESTE"
+mgc_region_nordeste = "MGC_REGION_NORDESTE"
+lhc_bucket = "LHC_BUCKET"
