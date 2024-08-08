@@ -8,11 +8,13 @@ Uso do Terraform na Magalu Cloud
 2. Crie o arquivo `terraform.tfvars` e adicione as variáveis, ex:
 ```
 mgc_api_key = "MGC_API_KEY"
-mgc_obj_key_id = "MGC_OBJ_KEY_ID"
-mgc_obj_key_secret = "MGC_OBJ_KEY_SECRET"
-mgc_region_sudeste = "MGC_REGION_SUDESTE"
-mgc_region_nordeste = "MGC_REGION_NORDESTE"
-lhc_bucket = "LHC_BUCKET"
+mgc_api_key_id = "MGC_API_KEY_ID"
+mgc_api_key_secret = "MGC_API_KEY_SECRET"
+mgc_region = "MGC_REGION"
+mgc_env = "MGC_ENV"
+vm_size = "VM_SIZE"
+db_username = "DB_USERNAME"
+db_password = "DB_PASSWORD"
 ```
 
 3. Instale o cli-mgc https://docs.magalu.cloud/docs/cli-mgc/how-to/download-and-install e faça o login:
@@ -30,14 +32,4 @@ mgc object-storage api-key set --uuid xxx-xxx-xxx
 terraform init
 terraform plan
 terraform apply
-```
-
-6. Obter a URL pública de acesso ao bucket, ex:
-```
-mgc object-storage buckets public-url --dst="lhc-bucket"
-```
-
-7. Acessar a página estática no browser (abrindo o index.html):
-```
-https://br-se1.magaluobjects.com/lhc-bucket/index.html
 ```
